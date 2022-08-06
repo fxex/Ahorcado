@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="assets/images/Logo.png" alt="Logo de Alura" class="header__logo">
+    </header>
+    <main class="main">
+        <section class="principal ">
+            <button class="principal__boton--juego" id="inicio">Iniciar Juego</button>
+            <button class="principal__boton--agregar" id="agregar">Agregar una nueva palabra</button>
+        </section>
+        <section class="canvas invisible">
+            <canvas class="cuadro" id="cuadro"></canvas>
+            <div class="botones">
+                <button class="botones__nuevo" id="nuevoJuego">Nuevo Juego</button>
+                <button class="botones__desistir" id="desistir">Desistir</button>
+            </div>
+        </section>
+    </main>
+    <footer class="redes">
+        <ul class="redes__lista">
+            <li class="redes__item">
+                <a href="https://www.linkedin.com/in/hugo-antonio-frey-aguilar-159185200/" target="_blank">
+                    <img src="assets/images/Logo-de-Linkedin.png" alt="Logo de Linkedin" class="item__linkedin">
+                    <span class="span_linkedin">Linkedin</span>
+                </a>
+            </li>
+            <li class="redes__item">
+                <a href="https://github.com/fxex" target="_blank" >
+                    <img src="assets/images/Logo-de-GitHub.png" alt="Logo de Linkedin" class="item__github">
+                    <span class="span_github">GitHub</span>
+                </a>
+            </li>
+        </ul>
+    </footer>
+    <script src="js/crear-cuadro.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/final.js"></script>
+    <script src="js/horca.js"></script>
+    <script src="js/botones.js"></script>
+</body>
+</html>

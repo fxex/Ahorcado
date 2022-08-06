@@ -1,0 +1,158 @@
+:root{
+    --fondo-principal: #F3F5FC;
+    --color-texto1: #FFFFFF;
+    --color-texto2:#0A3871;
+    --fondo-footer:#D8DFE8;
+}
+
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--fondo-principal);
+    font-family: monospace;
+    height: 100vh;
+}
+
+.header{
+    height: 15vh;
+}
+
+.header__logo{
+    margin: 2.2em;
+}
+
+.main{
+    height: 100vh;
+}
+
+.principal{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.principal__boton--juego, .principal__boton--agregar, .botones__nuevo, .botones__desistir{
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 2em;
+    border-radius: 2em;
+    cursor: pointer;
+    font-size: 18px;
+    transition: transform .5s;
+
+}
+
+.principal__boton--juego{    
+    background-color: var(--color-texto2);
+    color: var(--color-texto1);
+    width: 300px;
+    height: 20%;
+    margin: 2em;
+}
+
+.principal__boton--agregar{
+    color: var(--color-texto2);
+    border: 1px solid var(--color-texto2);
+    font-size: 16px;
+}
+
+.principal__boton--juego:hover, .principal__boton--agregar:hover, .botones__nuevo:hover,.botones__desistir:hover{
+    transform: scale(1.2);
+    filter: brightness(1.2);
+}
+
+.canvas{
+    height: 100%;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.cuadro{
+    height: 70%;
+    width: 100%;
+}
+
+.botones{
+    height: 20%;
+    width: 60%;
+    position: absolute;
+    display: flex;
+    top:90%;
+    left: calc(50% - 30%);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botones__nuevo,.botones__desistir{
+    padding: 2em;
+    width: 40%;
+}
+
+.botones__nuevo{
+    background-color: var(--color-texto2);
+    color: var(--color-texto1);
+}
+
+.botones__desistir{
+    color: var(--color-texto2);
+    border: 1px solid var(--color-texto2);
+}
+
+
+
+
+.redes{
+    /* display: none; */
+    background-color: var(--fondo-footer);
+    position: relative;
+    /* top: 2em; */
+    height: 10%;
+}
+
+.redes__lista{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.redes__item a{
+    border: none;
+    text-decoration: none;
+    position: relative;
+}
+
+.item__linkedin, .item__github{
+    margin: 10px;
+    width: 40px;
+    height: 40px;
+}
+
+.item__github{
+    width: 70px;
+}
+
+.span_github, .span_linkedin{
+    display: inline-block;
+    width: 5em;
+    position: absolute;
+    top: 50%;
+
+}
+
+.span_linkedin{
+    left: 0;
+}
+
+.span_github{
+    left: 30%;
+}
+
+
+.invisible{
+    display: none;
+}
