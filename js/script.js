@@ -5,7 +5,7 @@ let espacios = [];
 let letrasIncorrectas = [];
 let letrasCorrectas = [];
 let iniciar = true;
-
+let palabrasSecretas = [];
 
 let borrarPizarra = ()=>{
     let pincel = cuadro.getContext("2d");
@@ -58,51 +58,17 @@ let mostrarLetraIncorrecta = (letra)=>{
 }
 
 let palabraSecreta = ()=>{
-    let palabrasSecretas = ["titulo", "manzana", "limonada", "carbon", "hombro", "torreta", "moto", "legado"];
+    palabrasSecretas = ["titulo", "manzana", "limonada", "carbon", "hombro", "torreta", "moto", "legado"];
     let numeroRandom = Math.floor(Math.random() * (palabrasSecretas.length - 0) + 0);
     let palabra = palabrasSecretas[numeroRandom].toUpperCase();
     return palabra;
 }
 
-
-document.body.addEventListener("keydown", (e)=>{
-
-    if (inicio.parentElement.classList.contains("invisible") && iniciar) {
-        if (e.key.charCodeAt() > 96 && e.key.charCodeAt() < 123) {
-            if (texto.includes(e.key.toUpperCase()) && !letrasCorrectas.includes(e.key.toUpperCase()) ) {
-                letra = e.key.toUpperCase();
-                let cuenta = 0 
-                if (letrasCorrectas.length !== texto.length) {
-                    let posicion = texto.indexOf(letra);
-                    while(posicion != -1){
-                        letrasCorrectas.push(letra);
-                        mostrarLetraCorrecta(letra, posicion)
-                        cuenta++;
-                        posicion = texto.indexOf(letra, posicion+1)
-                    }
-                    if (letrasCorrectas.length === texto.length) {
-                        ganarJuego()
-                    }
-                } 
-
-
-            } else if(!texto.includes(e.key.toUpperCase())){
-                
-                let letra = e.key.toUpperCase();
-                if (!letrasIncorrectas.includes(letra)) {
-                    letrasIncorrectas.push(letra)
-                    if (letrasIncorrectas.length<7) {
-                        mostrarLetraIncorrecta(letra)
-                        dibujarManiqui(letrasIncorrectas.length)
-                    } else if(letrasIncorrectas.length == 7){
-                        mostrarLetraIncorrecta(letra)
-                        dibujarManiqui(letrasIncorrectas.length)
-                        finJuego();
-                    }
-                }
-                
-            }
-        }
-    }
-})
+let restaurarValores = ()=>{
+    letrasCorrectas=[];
+    letrasIncorrectas=[];
+    cont = 0;
+    iniciar = true
+    espacios = [];
+}
 

@@ -13,9 +13,17 @@
         <img src="assets/images/Logo.png" alt="Logo de Alura" class="header__logo">
     </header>
     <main class="main">
-        <section class="principal ">
+        <section class="principal">
             <button class="principal__boton--juego" id="inicio">Iniciar Juego</button>
             <button class="principal__boton--agregar" id="agregar">Agregar una nueva palabra</button>
+        </section>
+        <section class="agregar invisible">
+            <input type="text" placeholder="Ingrese una palabra" maxlength="8" id="inputAgregar" class="agregar__input">
+            <div class="guardar">
+                <button class="guardar__nuevo" id="guardar">Guardar y empezar</button>
+                <button class="guardar__cancelar" id="cancelar">Cancelar</button>
+                <p>Caracteres permitidos: 8</p>
+            </div>
         </section>
         <section class="canvas invisible">
             <canvas class="cuadro" id="cuadro"></canvas>
@@ -45,6 +53,6 @@
     <script src="js/script.js"></script>
     <script src="js/final.js"></script>
     <script src="js/horca.js"></script>
-    <script src="js/botones.js"></script>
+    <script src="js/eventos.js"></script>
 </body>
 </html>
