@@ -40,7 +40,10 @@ desistir.addEventListener("click", ()=>{
 })
 
 guardar.addEventListener("click",()=>{
-    if (inputAgregar.value.length !==0) {
+    let regex = new RegExp(/[á-ú]|[/,;:'"<>.*+\-?^${}()|[\]\\]|[0-9]/);
+    let valor = inputAgregar.value;
+    console.log(regex.test(valor));
+    if (valor.length !==0 && !regex.test(valor)) {
         restaurarValores()
         texto = inputAgregar.value.toUpperCase();
         palabrasSecretas.push(inputAgregar.value)
