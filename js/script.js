@@ -5,7 +5,7 @@ let espacios = [];
 let letrasIncorrectas = [];
 let letrasCorrectas = [];
 let iniciar = true;
-let palabrasSecretas = [];
+let palabrasSecretas = ["titulo", "manzana", "limonada", "carbon", "hombro", "torreta", "moto", "legado"];;
 
 let borrarPizarra = ()=>{
     let pincel = cuadro.getContext("2d");
@@ -58,7 +58,7 @@ let mostrarLetraIncorrecta = (letra)=>{
 }
 
 let palabraSecreta = ()=>{
-    palabrasSecretas = ["titulo", "manzana", "limonada", "carbon", "hombro", "torreta", "moto", "legado"];
+    
     let numeroRandom = Math.floor(Math.random() * (palabrasSecretas.length - 0) + 0);
     let palabra = palabrasSecretas[numeroRandom].toUpperCase();
     return palabra;
